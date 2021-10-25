@@ -17,6 +17,25 @@ SCREENSHOTS:
 ![image](https://user-images.githubusercontent.com/71410685/138749339-2016e82f-3a16-48e3-82ad-dd97b10fa139.png)
 
 
+LINKS:
+
+Video Presentation:
+
+Mozilla Hub: https://hubs.mozilla.com/NxZKzbD/jackie-and-ryan-assignment-2-infr-3110u
+
+DEVELOPMENT TEAM:
+
+Atlas X Games Sub-Group 1
+
+Jackie Zhou - Programmer, Design Patterns, GUI
+
+Ryan Sukhu - Artist, DLL, UML, Game Base
+
+UML Diagram:
+
+![Jump Observer UML](https://user-images.githubusercontent.com/71410685/138750748-85f34016-2940-4bd3-b253-b53e4c2ca897.png)
+
+
 ACKNOWLEDGEMENTS:
 
 Some sources that helped us were: 
