@@ -1,7 +1,7 @@
 using UnityEngine;
 
 //http://gyanendushekhar.com/2016/07/02/factory-method-design-pattern-c/
-//https://dotnettutorials.net/lesson/factory-method-design-pattern-csharp/
+
 //https://www.patrykgalach.com/2019/03/28/implementing-factory-design-pattern-in-unity/
 
 public class SphereFactory : ProductFactory
