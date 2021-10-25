@@ -1,7 +1,17 @@
 # INFR3110-A2
 
+GAME DESCRIPTION:
+
+Here in this build you will find a 2D sidescrolling platformer game, where the goal is to navgiate past obstacles and hazards to reach the goal zone at the end of the stage. Place additional hazards at your leisure to ramp up the difficulty to suit your experience. Feeling colourful? Click on any of the gray steps and spice them up with a dash of green, yellow or cyan.
+
+Control the player using the A & D keys to move left and right, and use the SPACE BAR to jump. 
+
+Check the SPAWNER box to enable placing of hazards, and choose whether they take the shape of cubes or spheres with the drop down located under the SPAWNER box. 
+
+To change the colour of steps, click the step you wish to change the colour of and the yellow, cyan, and green buttons will appear. Click on the corresponding button to achieve the desired colour change!
 
 
+ACKNOWLEDGEMENTS:
 
 Some sources that helped us were: 
 https://www.c-sharpcorner.com/article/factory-method-design-pattern-in-c-sharp/
