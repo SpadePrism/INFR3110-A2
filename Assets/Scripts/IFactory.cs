@@ -1,5 +1,8 @@
 using UnityEngine;
 
+//https://www.c-sharpcorner.com/article/factory-method-design-pattern-in-c-sharp/
+//https://dotnettutorials.net/lesson/factory-method-design-pattern-csharp/
+//https://unity3d.college/2018/12/12/creating-objects-in-unity3d-using-the-factory-pattern/
 public interface IFactory
 {
     void CreateShape();

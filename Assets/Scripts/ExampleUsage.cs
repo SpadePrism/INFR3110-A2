@@ -10,18 +10,18 @@ public class ExampleUsage : MonoBehaviour
 
     private void Start()
     {
-        type = Random.Range(1, 3);
-        Debug.Log(type );
+        type = Random.Range(1, 3); //1-2
+        Debug.Log(type);
         //var factory = new SphereFactory(new Vector3(0f, 3.5f, 0f), spherePrefab);
         //factory.CreateShape();
         //factory.SetPosition(new Vector3(0f, 5.5f, 0f));
-        //factory.CreateShape();
+
         ProductFactory factory;
         if (type == 1f)
         {
             //use factory to create deathballs
             factory = new SphereFactory(new Vector3(81f, 6f, 0f), spherePrefab);
-            // factory.MakeProduct();
+
             factory.MakeProduct();
             factory.MakeProduct(new Vector3(88.5f, 6f, 0f));
             factory.MakeProduct(new Vector3(97f, 5.5f, 0f));
