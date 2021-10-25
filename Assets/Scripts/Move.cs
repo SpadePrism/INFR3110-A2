@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
 
 public class Move : MonoBehaviour
 {
     private Rigidbody rb;
-    Vector3 startPos;
+    private Vector3 startPos;
     private float speed;
     public float spdM;
     public float jump = 15.0f;
@@ -15,10 +13,13 @@ public class Move : MonoBehaviour
     private float dirX;
     private bool grounded = false;
     private bool muddy = false;
+
     public static event Action died;
 
+    public static event Action jumped;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         spdM = 20.0f;
         speed = spdM;
@@ -29,11 +30,11 @@ public class Move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         dirX = Input.GetAxis("Horizontal") * speed;
 
-        if(muddy)
+        if (muddy)
         {
             speed = 5.0f;
         }
@@ -42,21 +43,33 @@ public class Move : MonoBehaviour
             speed = spdM;
         }
 
-        if(grounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jump, ForceMode.VelocityChange);
             grounded = false;
+
+            #region observer
+
+            jumped?.Invoke();
+
+            #endregion observer
         }
-        else if(muddy && Input.GetKeyDown(KeyCode.Space))
+        else if (muddy && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * (jump - 10.0f), ForceMode.VelocityChange);
             muddy = false;
+
+            #region observer
+
+            jumped?.Invoke();
+
+            #endregion observer
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        if(!grounded)
+        if (!grounded)
         {
             rb.AddForce(Physics.gravity * gravityM, ForceMode.Acceleration);
         }
@@ -67,46 +80,48 @@ public class Move : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         Ground ground = collision.gameObject.GetComponent<Ground>();
-        if(ground)
+        if (ground)
         {
             grounded = true;
         }
 
         Mud mud = collision.gameObject.GetComponent<Mud>();
-        if(mud)
+        if (mud)
         {
             muddy = true;
         }
 
         Death death = collision.gameObject.GetComponent<Death>();
-        if(death)
+        if (death)
         {
             gameObject.transform.position = startPos;
             DeathCount.Instance.Value++;
 
             #region observer
+
             died?.Invoke();
-            #endregion
+
+            #endregion observer
         }
 
         Goal goal = collision.gameObject.GetComponent<Goal>();
-        if(goal)
+        if (goal)
         {
             SceneManager.LoadScene("End");
             DeathCount.Instance.Value = 0;
         }
     }
 
-    void OnCollisionExit(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         Ground ground = collision.gameObject.GetComponent<Ground>();
-        if(ground)
+        if (ground)
         {
             grounded = false;
         }
 
         Mud mud = collision.gameObject.GetComponent<Mud>();
-        if(mud)
+        if (mud)
         {
             muddy = false;
         }

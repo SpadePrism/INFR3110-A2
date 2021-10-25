@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DAudioPlayer : MonoBehaviour
+public class JumpAudio : MonoBehaviour
 {
     private AudioSource _audiosource;
 
@@ -13,12 +11,12 @@ public class DAudioPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        Move.died += PlayAudio;
+        Move.jumped += PlayAudio;
     }
 
     private void OnDisable()
     {
-        Move.died -= PlayAudio;
+        Move.jumped -= PlayAudio;
     }
 
     private void PlayAudio()
