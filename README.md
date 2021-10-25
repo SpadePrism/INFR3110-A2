@@ -16,4 +16,4 @@ https://dotnettutorials.net/lesson/factory-method-design-pattern-csharp/
 
 https://www.patrykgalach.com/2019/03/28/implementing-factory-design-pattern-in-unity/
 
-As well as content from the 4th adn 5th labs for Game engines and Design.
+As well as content from the 4th and 5th labs for Game engines and Design.
