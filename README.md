@@ -16,6 +16,8 @@ https://unity3d.college/2018/12/12/creating-objects-in-unity3d-using-the-factory
 
 https://www.patrykgalach.com/2019/03/28/implementing-factory-design-pattern-in-unity/
 
+https://medium.com/nerd-for-tech/command-design-pattern-in-unity-17979cce686f
+
 https://gamedev.stackexchange.com/questions/95559/blocking-physics-raycasts-with-unitys-4-6-ui
 
 As well as content from the 4th and 5th labs for Game engines and Design.
