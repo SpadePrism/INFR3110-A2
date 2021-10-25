@@ -19,7 +19,7 @@ SCREENSHOTS:
 
 LINKS:
 
-Video Presentation:
+Video Presentation: https://youtu.be/vbwmgkvAC94
 
 Mozilla Hub: https://hubs.mozilla.com/NxZKzbD/jackie-and-ryan-assignment-2-infr-3110u
 
