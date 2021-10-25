@@ -4,6 +4,7 @@ using UnityEngine;
 
 //https://www.patrykgalach.com/2019/03/28/implementing-factory-design-pattern-in-unity/
 
+//concrete creator
 public class SphereFactory : ProductFactory
 {
     private Vector3 position;
@@ -19,7 +20,6 @@ public class SphereFactory : ProductFactory
     {
         IFactory product = new Sphere(position, cube);
         product.CreateShape();
-
         return product;
     }
 
