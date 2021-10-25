@@ -16,16 +16,16 @@ public class SphereFactory : ProductFactory
         this.cube = cube;
     }
 
-    public override IFactory MakeProduct()
+    public override Sphere MakeProduct()
     {
-        IFactory product = new Sphere(position, cube);
+        Sphere product = new Sphere(position, cube);
         product.CreateShape();
         return product;
     }
 
-    public override IFactory MakeProduct(Vector3 Position)
+    public override Sphere MakeProduct(Vector3 Position)
     {
-        IFactory product = new Sphere(Position, cube);
+        Sphere product = new Sphere(Position, cube);
         product.CreateShape();
 
         return product;

@@ -80,22 +80,21 @@ public class Sphere : IFactory
 //    }
 //}
 
-//creator
-public abstract class ProductFactory
+public abstract class ProductFactory //creator
 {
     private Vector3 position;
 
-    public abstract IFactory MakeProduct();
+    public abstract Sphere MakeProduct();
 
-    public abstract IFactory MakeProduct(Vector3 Position);
+    public abstract Sphere MakeProduct(Vector3 Position);
 
     public void SetPosition(Vector3 pos)
     {
         position = pos;
     }
 
-    public IFactory GetObject() // Implementation of Factory Method.
+    public Sphere GetObject() // Implementation of Factory Method.
     {
-        return this.MakeProduct();
+        return this.MakeProduct(position);
     }
 }
