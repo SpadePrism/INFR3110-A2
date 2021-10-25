@@ -95,7 +95,7 @@ public class Move : MonoBehaviour
         if (death)
         {
             gameObject.transform.position = startPos;
-            DeathCount.Instance.Value++;
+            DeathCount.Instance.died();
 
             #region observer
 
@@ -108,7 +108,6 @@ public class Move : MonoBehaviour
         if (goal)
         {
             SceneManager.LoadScene("End");
-            DeathCount.Instance.Value = 0;
         }
     }
 
