@@ -7,9 +7,10 @@ public class Move : MonoBehaviour
     private Rigidbody rb;
     private Vector3 startPos;
     private float speed;
+    public float spdM;
+    public float jump = 15.0f;
+    public float gravityM = 1.1f;
     private float dirX;
-    private float jump = 15.0f;
-    private float gravityM = 1.1f;
     private bool grounded = false;
     private bool muddy = false;
 
@@ -20,7 +21,8 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        speed = 20.0f;
+        spdM = 20.0f;
+        speed = spdM;
 
         rb = GetComponent<Rigidbody>();
 
@@ -38,7 +40,7 @@ public class Move : MonoBehaviour
         }
         else
         {
-            speed = 20.0f;
+            speed = spdM;
         }
 
         if (grounded && Input.GetKeyDown(KeyCode.Space))
