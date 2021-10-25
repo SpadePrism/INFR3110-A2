@@ -55,7 +55,7 @@ https://medium.com/nerd-for-tech/command-design-pattern-in-unity-17979cce686f
 
 https://gamedev.stackexchange.com/questions/95559/blocking-physics-raycasts-with-unitys-4-6-ui
 
-As well as content from the 4th and 5th labs for Game engines and Design.
-While, the sources helped us understand the Game Design patterns better we didn't use any reference code form them. We did somewhat structure our patterns like them however. 
+We also used content from the 4th and 5th labs for Game Engines and Design.
+While, the sources helped us understand the Game Design patterns better we didn't use any reference code from them. We did somewhat structure our patterns like them however. 
 
 The stack exchange source did provide me with a function in Unity that I used in the project to make sure the user didn't spawn in objects when they were trying to interact with UI (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()).  
