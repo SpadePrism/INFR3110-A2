@@ -19,7 +19,7 @@ SCREENSHOTS:
 
 LINKS:
 
-Video Presentation: https://youtu.be/vbwmgkvAC94
+Video Presentation (the last minute and a half are just talking about sources we used): https://youtu.be/q050IwmLOcM
 
 Mozilla Hub: https://hubs.mozilla.com/NxZKzbD/jackie-and-ryan-assignment-2-infr-3110u
 
