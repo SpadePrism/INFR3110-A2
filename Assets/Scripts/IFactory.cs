@@ -3,7 +3,7 @@ using UnityEngine;
 //https://www.c-sharpcorner.com/article/factory-method-design-pattern-in-c-sharp/
 //https://dotnettutorials.net/lesson/factory-method-design-pattern-csharp/
 //https://unity3d.college/2018/12/12/creating-objects-in-unity3d-using-the-factory-pattern/
-//interface
+//interface / product
 public interface IFactory
 {
     void CreateShape();
@@ -84,16 +84,16 @@ public abstract class ProductFactory //creator
 {
     private Vector3 position;
 
-    public abstract Sphere MakeProduct();
+    public abstract IFactory MakeProduct();
 
-    public abstract Sphere MakeProduct(Vector3 Position);
+    public abstract IFactory MakeProduct(Vector3 Position);
 
     public void SetPosition(Vector3 pos)
     {
         position = pos;
     }
 
-    public Sphere GetObject() // Implementation of Factory Method.
+    public IFactory GetObject() // Implementation of Factory Method.
     {
         return this.MakeProduct(position);
     }
