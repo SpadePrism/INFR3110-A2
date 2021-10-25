@@ -7,6 +7,8 @@ public class GUIChanger : MonoBehaviour
     private RaycastHit hitInfo;
     public GameObject subject;
 
+    public Text _text;
+
     // public Transform cubePrefab;
     // public Transform cylinderPrefab;
     public Button green;
@@ -28,7 +30,7 @@ public class GUIChanger : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = maincam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
             {
                 //Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                 if (hitInfo.transform.gameObject.tag == "Step")
@@ -41,6 +43,7 @@ public class GUIChanger : MonoBehaviour
                     ICommand command2 = new SpawnButtonCommand(cyan);
                     Invoker.AddCommand(command2);
                     subject = hitInfo.transform.gameObject;
+                    _text.text = "Selection: " + hitInfo.transform.gameObject.name;
                 }
             }
         }
