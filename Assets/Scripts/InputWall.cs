@@ -25,7 +25,7 @@ public class InputWall : MonoBehaviour
         //        ICommand command = new PlaceDeathCommand(hitInfo.point, cubePrefab);
         //        Invoker.AddCommand(command);
         //        Debug.Log("Tag = " + hitInfo.point);
-              
+
         //    }
         //}
     }
